@@ -1,0 +1,250 @@
+jenkins:
+  agentProtocols:
+  - "Diagnostic-Ping"
+  - "JNLP4-connect"
+  - "OperationsCenter2"
+  - "Ping"
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: false
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: false
+  disableRememberMe: false
+  labelAtoms:
+  - name: "master"
+  markupFormatter: "plainText"
+  mode: NORMAL
+  myViewsTabBar: "standard"
+  noUsageStatistics: true
+  numExecutors: 2
+  primaryView:
+    masters:
+      columns:
+      - "status"
+      - "weather"
+      - "jobName"
+      - "manageMaster"
+      - "masterConfigurationStaleViewColumn"
+      - "totalJobsViewColumn"
+      - "queueSizeViewColumn"
+      - "jenkinsVersionViewColumn"
+      - "listSelectionColumn"
+      jobFilters:
+      - "connectedMasterViewFilter"
+      name: "Controllers"
+      recurse: true
+  projectNamingStrategy: "standard"
+  quietPeriod: 5
+  remotingSecurity:
+    enabled: true
+  scmCheckoutRetryCount: 0
+  securityRealm:
+    local:
+      allowsSignup: false
+      enableCaptcha: false
+      users:
+      - id: "admin"
+        name: "administrator"
+        properties:
+        - "blueSteelRedirectOptOutProperty"
+        - "myView"
+        - preferredProvider:
+            providerId: "default"
+        - "timezone"
+        - mailer:
+            emailAddress: "pyang@cloudbees.com"
+        - "apiToken"
+  slaveAgentPort: 50000
+  updateCenter:
+    sites:
+    - id: "core-oc-offline"
+      url: "file:/tmp/jenkins/war/WEB-INF/plugins/update-center.json"
+    - id: "cap-core-oc"
+      url: "https://jenkins-updates.cloudbees.com/update-center/envelope-core-oc/update-center.json"
+  views:
+  - masters:
+      columns:
+      - "status"
+      - "weather"
+      - "jobName"
+      - "manageMaster"
+      - "masterConfigurationStaleViewColumn"
+      - "totalJobsViewColumn"
+      - "queueSizeViewColumn"
+      - "jenkinsVersionViewColumn"
+      - "listSelectionColumn"
+      jobFilters:
+      - "connectedMasterViewFilter"
+      name: "Controllers"
+      recurse: true
+  - all:
+      name: "all"
+  viewsTabBar: "standard"
+beekeeper:
+  enabled: true
+  securityWarnings:
+    enabledForCore: true
+    enabledForPlugins: true
+  upgrades:
+    autoDowngradePlugins: false
+    autoUpgradePlugins: false
+notificationConfiguration:
+  enabled: true
+  router: "operationsCenter"
+cloudBeesCasCServer:
+  visibility: false
+license:
+  certificate: |
+    -----BEGIN CERTIFICATE-----
+    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
+    Hoi/j+uqs/Y0HiuLhLu7ZHYaMNdpQRH9RGiPmg==
+    -----END CERTIFICATE-----
+  key: |
+    -----BEGIN RSA PRIVATE KEY-----
+    MIIEpAIBAAKCAQEAvDLnR10jNzclDgs2K2Y/eBKQR1lnu89HlBiSlyUf9kBkmxPJ
+    d/DFu+ZLM2R+ZzJMgmm89M2Sn5dyUaj204+pwQSGcwl0T3ysK+7Q+sl9gqUj30fK
+    5UF2NC5JTwZc/tGJBfuZn7k0gVw1RwSy5bsk+LRKq7dE2tOZP4xxHThvZMBcctv8
+    72ehbD2UjBTeSLz/Bft/w2iLHHzTMiRT3/mdcorRurLNzlttEsV2H8dVbkW4XsRh
+    o2tqEVq0iAXBfOlJ+GUlAbWcvAapFCnLAMxkWpsypDseM8TzRsZqtkR2O2/jZbnA
+    eDKjpTaIootdchnEGvXD3C3h3xz4MQFoVxi93QIDAQABAoIBAEmmJgowcaqXAwJG
+    8vDy952Wri2t2EGQMXPMVfmeRq7IrlZd3Pb6G3eX/Q/koO7jqTtUA+VNWbbovo0k
+    cUuDqivmCHOWXJUKthoPQGsUVPC+jZZAcy9aedab0oaBd/0kpNnZh1oRUXHaUuMy
+    /IuYvDQz4hDnDKQSMKPE4zNLNZSYYuA9/HXT4pPbjExhY6fjO3G5w/NfMSTD73W+
+    xpj+p1E0Yp81lBXI00Si8+ExcDwdPbLPFevkoCANp1NI5eUCzct/gFTrJici+4+u
+    4dr5evTkhHEdlfFtYkWD9PVpOh8HwkhoPPC3l1sEXb4NBLchMiC75B50EmbYniw4
+    t2ht4iUCgYEA5TWH7V170jkHo3TpkykbdFlm4UbwuLNv8XnLZousUldCQwECwr2C
+    bberXQGj1sTjhgWTX9Z1mA4faLQlBCFn6CyvgxOtiDOa+9pBe2ZrnYDef1yTx0cS
+    Z5l9NaiaSGAPpPjig/vjgjYhZhuK8+nl9lINi//Q9tzRt8bHuu1G6LcCgYEA0jJA
+    BUVRfRfmS+JwZW63ibnvFhNFD1lRg3JGDuuAd2BwfvVWDjTXq12OI9EOlsB8hS0D
+    w0aPv2FKiND4kvnlyiQiWslGNJdXhEZUiXAzvXlZbeGH6BugxXEdOSb021DfFnyg
+    Z0mWP9JxY03jjC1M1dc4e3kkqajl24qv0v4vMgsCgYEAwPR+mGlhaokOECHE3Fj3
+    vsvgWveAgMy2CV/RxmMAz1Sb+JIqQ8yLt1eukB5oUc3wCAw7k6uT1UzWTiuRGdgR
+    hBfSLRNsu8NNzoVfKMYBBFfPdwJ1eYYwTTyedoSYVSNhKC1Ja3iqfxyYoz++izW1
+    nNZYhyn1PUyJ1B8oVwmW7yMCgYEAyAuS6nFCUK+COg5TsfVhL+6JIJVOUIFNFrCX
+    BHQVW4epCOss73BTIYB0WpoILGkdGRHyVtK81AMgEH3xVNAIZg1ltMmBy2ONoxHc
+    OsFSPK1U80KFOd2xcLdqfI4a0u9wodISRrq+CBecWkoymaIzUgD2fGya++0GdZ7U
+    HxZSjGkCgYBpVWSgEdYtJX8/IZBydOHagrtzvJZQmfJdzymwz7mTef9iZIbiy6mh
+    mKs1UqIkpoh082jTkxO6X75s0kEOjSouhgX2FpguthUpjuuINpHNQBlbC4M3P2nO
+    vefdMAeechlrPXWmCghr0x8fFndyzzYdDLa53JX/UC2jgEjhjIh7tA==
+    -----END RSA PRIVATE KEY-----
+masterprovisioning:
+  dockerImageDefinitionConfiguration:
+    images:
+    - imageTag: "us-east1-docker.pkg.dev/pyang-325908/containerrepo1/cloudbees-core-mm"
+      name: "CloudBees CI - Managed Master - "
+  kubernetes:
+    clusterEndpoints:
+    - id: "default"
+      ingressClass: "nginx"
+      jenkinsUrl: "http://cjoc.cloudbees-core.svc.cluster.local/cjoc/"
+      name: "kubernetes"
+    cpus: "1.0"
+    disk: 50
+    fsGroup: "1000"
+    globalJavaOptions: "-Dorg.csanchez.jenkins.plugins.kubernetes.pipeline.PodTemplateStepExecution.defaultImage=us-east1-docker.pkg.dev/pyang-325908/containerrepo1/cloudbees-core-agent\
+      \ -Dcom.cloudbees.jenkins.plugins.kube.ServiceAccountFilter.defaultServiceAccount=jenkins-agents\
+      \ -Dcom.cloudbees.networking.useSubdomain=false -Dcom.cloudbees.networking.protocol=\"\
+      http\" -Dcom.cloudbees.networking.hostname=\"cloudbees-core.example.com\" -Dcom.cloudbees.networking.port=80\
+      \ -Dcom.cloudbees.networking.operationsCenterName=\"cjoc\""
+    javaOptions: "-XshowSettings:vm -XX:+AlwaysPreTouch -XX:+UseG1GC -XX:+DisableExplicitGC\
+      \ -XX:+ParallelRefProcEnabled -XX:+UseStringDeduplication -Dhudson.slaves.NodeProvisioner.initialDelay=0"
+    livenessInitialDelaySeconds: 300
+    livenessPeriodSeconds: 10
+    livenessTimeoutSeconds: 10
+    memory: 3072
+    readinessFailureThreshold: 100
+    readinessInitialDelaySeconds: 30
+    readinessTimeoutSeconds: 5
+    terminationGracePeriodSeconds: 1200
+security:
+  anonymizeSupportBundle:
+    enabled: false
+  apiToken:
+    creationOfLegacyTokenEnabled: false
+    tokenGenerationOnCreationEnabled: false
+    usageStatisticsEnabled: true
+  sSHD:
+    port: -1
+  securitySettingsEnforcement:
+    global:
+      realmAndAuthorization:
+        canCustomMapping: false
+        canOverride: false
+        defaultMappingFactory: "restrictedEquivalentRAMF"
+unclassified:
+  buildDiscarders:
+    configuredBuildDiscarders:
+    - "jobBuildDiscarder"
+  experimentalPlugins:
+    enabled: false
+  fingerprints:
+    fingerprintCleanupDisabled: false
+    storage: "file"
+  gitSCM:
+    addGitTagAction: false
+    allowSecondFetch: false
+    createAccountBasedOnEmail: false
+    disableGitToolChooser: false
+    hideCredentials: false
+    showEntireCommitSummaryInChanges: false
+    useExistingAccountWithSameEmail: false
+  junitTestResultStorage:
+    storage: "file"
+  location:
+    adminAddress: "address not configured yet <nobody@nowhere>"
+    url: "http://cloudbees-core.example.com/cjoc/"
+  mailer:
+    charset: "UTF-8"
+    useSsl: false
+    useTls: false
+  operationsCenterSharedConfiguration:
+    enabled: false
+  pollSCM:
+    pollingThreadCount: 10
+  usageStatisticsCloudBees:
+    disabledJenkinsUsageStatistics: true
+    usageStatisticsCollected: false
+tool:
+  cloudbeesPluginUsageAnalyzer:
+    enabled: true
+  git:
+    installations:
+    - home: "git"
+      name: "Default"
+  mavenGlobalConfig:
+    globalSettingsProvider: "standard"
+    settingsProvider: "standard"
