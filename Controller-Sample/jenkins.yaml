@@ -18,9 +18,9 @@ jenkins:
   myViewsTabBar: "standard"
   noUsageStatistics: true
   numExecutors: 0
-  primaryView:
-    all:
-      name: "all"
+#  primaryView:
+#    all:
+#      name: "all"
   projectNamingStrategy: "standard"
   quietPeriod: 5
   remotingSecurity:
@@ -34,9 +34,9 @@ jenkins:
       url: "file:/tmp/jenkins/war/WEB-INF/plugins/update-center.json"
     - id: "cap-core-mm"
       url: "https://jenkins-updates.cloudbees.com/update-center/envelope-core-mm/update-center.json"
-  views:
-  - all:
-      name: "all"
+#  views:
+#  - all:
+#      name: "all"
   viewsTabBar: "standard"
 beekeeper:
   enabled: true
