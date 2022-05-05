@@ -122,4 +122,8 @@ plugins:
 - {id: workflow-scm-step}
 - {id: workflow-step-api}
 - {id: workflow-support}
+- {id: declarative-pipeline-migration-assistant}
+- {id: notification-api}
+- {id: operations-center-notification}
+- {id: pipeline-event-step}
 # - {id: cloudbees-quiet-start}
